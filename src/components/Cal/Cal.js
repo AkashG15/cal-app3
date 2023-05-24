@@ -69,6 +69,18 @@ const Cal = () => {
         setInputVal1((prevValue) => parseInt(prevValue.toString() + 9));
       },
     },
+    {
+      value: "C",
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + "C"));
+      },
+    },
+    {
+      value: "AC",
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + "AC"));
+      },
+    },
   ];
 
   const oprationArr = [
@@ -103,8 +115,8 @@ const Cal = () => {
         setOprationValue(inputVal1);
         setInputVal1(0);
     }
-},   
-    {
+},
+   {
         value: '=',
         btFun: () => {
             if(currentOpration === '+'){
