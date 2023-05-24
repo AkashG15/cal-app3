@@ -53,6 +53,22 @@ const Cal = () => {
         }
     },
     {
+      value: '*',
+      btFun: () => {
+          setCurrentOpration('*');
+          setOprationValue(inputVal1);
+          setInputVal1(0);
+      }
+  },
+  {
+    value: '/',
+    btFun: () => {
+        setCurrentOpration('/');
+        setOprationValue(inputVal1);
+        setInputVal1(0);
+    }
+},   
+    {
         value: '=',
         btFun: () => {
             if(currentOpration === '+'){
@@ -61,11 +77,25 @@ const Cal = () => {
                     return prevValue + oprationValue
                 })
 
-            }else if(currentOpration === '-'){
+            }if(currentOpration === '/'){
+
+              setInputVal1((prevValue) => {
+                  return  oprationValue / prevValue 
+              })
+            }
+            if(currentOpration === '*'){
+
+              setInputVal1((prevValue) => {
+                  return oprationValue * prevValue
+              })
+            }
+            else if(currentOpration === '-'){
                 setInputVal1((prevValue) => {
                     return oprationValue - prevValue; 
                 })
+                 
             }
+
         }
     }
   ];
