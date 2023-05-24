@@ -33,6 +33,42 @@ const Cal = () => {
         setInputVal1(parseInt(newValue));
       },
     },
+    {
+      value: 4,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 4));
+      },
+    },
+    {
+      value: 5,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 5));
+      },
+    },
+    {
+      value: 6,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 6));
+      },
+    },
+    {
+      value: 7,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 7));
+      },
+    },
+    {
+      value: 8,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 8));
+      },
+    },
+    {
+      value: 9,
+      btFun: () => {
+        setInputVal1((prevValue) => parseInt(prevValue.toString() + 9));
+      },
+    },
   ];
 
   const oprationArr = [
